@@ -1,0 +1,119 @@
+:root { 
+  --white: #ffffff; 
+  --bg: #000000; 
+  --blue: #2797dd; 
+  --grey: #6e767d; 
+  --pink: #f72381; 
+  --body1-regular: 400 1rem/1.75rem Poppins; 
+  --body1-bold: 700 1rem/1.75rem Poppins; 
+  --body2-bold: 700 0.75rem/1.5rem Poppins; 
+  --body2-regular: 400 0.75rem/1.375rem Poppins;   
+  --caption-semi-bold: 600 0.74rem/1rem Poppins;
+  --caption-regular: 400 0.74rem/1rem Poppins;
+  --button: 400 0.875rem/1rem Poppins;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--white);
+  font: var(--body2-bold);
+  background-color: var(--bg);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main {
+  width: 700px;
+  height: auto;
+  border: 1px solid var(--grey);
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.photo img {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 24px 16px 0px 24px;
+}
+.content {
+  margin: 24px 24px 24px 0;
+}
+header {
+  display: flex;
+  column-gap: 16px;
+}
+header h1 {
+  font: var(--body1-bold);
+}
+header p {
+  font: var(--body1-regular);
+  color: var(--grey);
+}
+.tweet p {
+  font: var(--body1-regular)
+}
+.tweet span {
+  color: var(--blue);
+  cursor: pointer;
+}
+.card {
+  width: 100%;
+  height: 144px;
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  border-radius: 24px;
+  border: 1px solid var(--grey);
+  overflow: hidden;
+  cursor: pointer;
+}
+.card img {
+  width: 144px;
+  height: 144px;
+  border-radius: 24px 0 0 24px;
+}
+.card .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card .container p:nth-child(2n+1) {
+  font: var(--body1-regular);
+  color: var(--grey);
+}
+footer {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer .images {
+  display: flex;
+  align-self: center;
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+footer .images img {
+  position: absolute;
+  transition: opacity 1s ease-out;
+}
+footer img {
+  cursor: pointer;
+}
+footer p {
+  font: var(--body1-regular);
+  color: var(--grey);
+  transition: 1s ease-out;
+}
+.opaque {
+  opacity: 1;
+}
+.transparent {
+  opacity: 0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Tweed</title>
+</head>
+<body>
+  <main>
+    <div class="photo">
+      <img src="./images/191F1C03-A48D-471B-97A8-F93DFA08BF83.jpg" alt="image">
+    </div>
+    <div class="content">
+      <header>
+        <h1 class="name">< Isaac /></h1>
+        <p>@isaaccitomix·2h</p>
+      </header>
+      <div class="tweet">
+        <p>
+          Thank you  <span>@ferxxo4</span> for spending 4.674 minutes with me this year on <span>@Spotify</span>. You are my #1. <span>#SpotifyWrapped</span>
+        </p>
+        <div class="card">
+          <img src="https://www.eluniverso.com/resizer/qGzhwh-7GEsvNWXj_OMmCI5EN2o=/636x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/PKSIMOCBHZB7FP4QRQTMHYXYJY.jpg" alt="feid">
+          <div class="container">
+              <p>open.spotify.com</p>
+              <p>Feid</p>
+              <p>Artist·10.2M monthly listeners.</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="images">
+          <img id="heart" class="opaque" src="./icons/Heard-1.png" alt="heart">
+          <img id="heart" class="transparent" src="./icons/Heard-3.png" alt="heart">
+          <img id="heart" class="transparent" src="./icons/Heard-2.png" alt="heart">
+          
+        </div>
+        <p id="likes">250</p>
+      </footer>
+    </div>
+  </main>
+  <script>
+    const likes = document.querySelector("#likes");
+    const images = document.querySelector(".images");
+    images.addEventListener('click', function (){
+      likes.style.color = "var(--pink)";
+      likes.textContent = parseInt(likes.textContent) + 1;
+      for (let i=0; i<images.children.length; i++) {
+        images.children[i].classList.toggle('opaque');
+        images.children[i].classList.toggle('transparent');
+      }
+    })
+  </script>
+</body>
+</html>
